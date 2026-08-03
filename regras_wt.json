@@ -352,7 +352,7 @@
           "P": "Plataformado"
         },
         "7": {
-          "*": "Dados de fábrica, informação restrita de fábrica"
+          "0": "Dados de fábrica, informação restrita de fábrica"
         },
         "8": {
           "1": "Pacote Basic 1",
@@ -367,7 +367,10 @@
           "C": "Sem tecnologia + eixo Carraro + para-lamas dianteiros Carraro"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "A": "Mercado Argentina",
+          "E": "Mercado OSA",
+          "X": "Mercado Africa"
         }
       },
       "restrictions": [],

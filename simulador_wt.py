@@ -216,42 +216,75 @@ if st.button("Analisar e decodificar", type="primary", use_container_width=True)
             "Análise WT": row["Resultado"],
         })
 
-    st.subheader("Resumo das alterações")
-    st.caption(f"{family} | {current} → {proposed}")
+    tab_summary, tab_current, tab_proposed = st.tabs([
+        "Resumo das alterações",
+        "Configuração atual",
+        "Configuração proposta",
+    ])
 
-    if changes:
-        changes_df = pd.DataFrame(changes)
-        st.dataframe(changes_df, use_container_width=True, hide_index=True)
+    with tab_summary:
+        st.subheader("Resumo das alterações")
+        st.caption(f"{family} | {current} → {proposed}")
 
-        review_count = sum(
-            item["Análise WT"] not in ["Solicitar WT", "Não solicitar WT"]
-            for item in changes
-        )
-        no_wt_count = sum(item["Análise WT"] == "Não solicitar WT" for item in changes)
+        if changes:
+            changes_df = pd.DataFrame(changes)
+            st.dataframe(changes_df, use_container_width=True, hide_index=True)
 
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Alterações", len(changes))
-        c2.metric("Sem necessidade de WT", no_wt_count)
-        c3.metric("Exigem verificação", review_count + len(wt_violations))
-    else:
-        st.info("Nenhuma alteração foi identificada entre os códigos.")
-
-    for message in wt_violations:
-        st.error(f"Regra de WT: {message}")
-    for message in current_alerts:
-        st.warning(f"Código atual: {message}")
-    for message in proposed_alerts:
-        st.warning(f"Código proposto: {message}")
-
-    # Mostra somente os valores não documentados que participam de uma alteração.
-    changed_positions = {item["Posição"] for item in changes}
-    for decoded_row in proposed_decoded:
-        if (
-            decoded_row["Posição"] in changed_positions
-            and decoded_row["Configuração"] == "Valor não documentado no PDF cadastrado"
-        ):
-            st.warning(
-                f"Valor proposto não documentado: posição {decoded_row['Posição']} "
-                f"({decoded_row['Componente']}) = '{decoded_row['Código']}'."
+            review_count = sum(
+                item["Análise WT"] not in ["Solicitar WT", "Não solicitar WT"]
+                for item in changes
+            )
+            no_wt_count = sum(
+                item["Análise WT"] == "Não solicitar WT" for item in changes
             )
 
+            c1, c2, c3 = st.columns(3)
+            c1.metric("Alterações", len(changes))
+            c2.metric("Sem necessidade de WT", no_wt_count)
+            c3.metric("Exigem verificação", review_count + len(wt_violations))
+        else:
+            st.info("Nenhuma alteração foi identificada entre os códigos.")
+
+        for message in wt_violations:
+            st.error(f"Regra de WT: {message}")
+        for message in current_alerts:
+            st.warning(f"Código atual: {message}")
+        for message in proposed_alerts:
+            st.warning(f"Código proposto: {message}")
+
+        changed_positions = {item["Posição"] for item in changes}
+        for decoded_row in proposed_decoded:
+            if (
+                decoded_row["Posição"] in changed_positions
+                and decoded_row["Configuração"] == "Valor não documentado no PDF cadastrado"
+            ):
+                st.warning(
+                    f"Valor proposto não documentado: posição {decoded_row['Posição']} "
+                    f"({decoded_row['Componente']}) = '{decoded_row['Código']}'."
+                )
+
+    with tab_current:
+        st.subheader("Configuração atual")
+        st.caption(current)
+        st.dataframe(
+            pd.DataFrame(current_decoded),
+            use_container_width=True,
+            hide_index=True,
+        )
+        for message in current_alerts:
+            st.warning(message)
+        for message in current_unknown:
+            st.warning(f"Não documentado: {message}")
+
+    with tab_proposed:
+        st.subheader("Configuração proposta")
+        st.caption(proposed)
+        st.dataframe(
+            pd.DataFrame(proposed_decoded),
+            use_container_width=True,
+            hide_index=True,
+        )
+        for message in proposed_alerts:
+            st.warning(message)
+        for message in proposed_unknown:
+            st.warning(f"Não documentado: {message}")

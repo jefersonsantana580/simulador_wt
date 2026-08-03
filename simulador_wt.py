@@ -249,7 +249,26 @@ with result_col:
 
             if changes:
                 changes_df = pd.DataFrame(changes)
-                st.dataframe(changes_df, use_container_width=True, hide_index=True)
+
+                def color_wt_result(value):
+                    result = str(value).strip().casefold()
+                    if result == "solicitar wt":
+                        return "background-color: #1f7a4d; color: #ffffff; font-weight: 700;"
+                    if result == "não solicitar wt":
+                        return "background-color: #b4232f; color: #ffffff; font-weight: 700;"
+                    if "verificar tecnologia" in result:
+                        return "background-color: #f2c94c; color: #111111; font-weight: 700;"
+                    return "background-color: #d97706; color: #ffffff; font-weight: 700;"
+
+                styled_changes = changes_df.style.map(
+                    color_wt_result,
+                    subset=["Análise WT"],
+                )
+                st.dataframe(
+                    styled_changes,
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
                 review_count = sum(
                     item["Análise WT"] not in ["Solicitar WT", "Não solicitar WT"]

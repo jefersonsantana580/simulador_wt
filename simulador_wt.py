@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Simulador WT Tratores", page_icon="🚜", layout="wide")
 BASE_DIR = Path(__file__).resolve().parent
-DOCUMENTS_DIR = BASE_DIR / "documentos"
+DOCUMENTS_DIR = BASE_DIR / "documents"
 
 @st.cache_data
 def load_rules():

@@ -92,13 +92,23 @@ def identify(code: str):
 def char_at(code: str, position: int) -> str:
     return code[position - 1] if len(code) >= position else ""
 
+
+def extract_field_value(code: str, field: dict) -> str:
+    """Replica a logica do Excel: o primeiro campo usa LEFT e os demais usam MID."""
+    if field.get("extraction") == "prefix":
+        length = int(field.get("length", field["position"]))
+        return code[:length] if len(code) >= length else code
+    return char_at(code, int(field["position"]))
+
 def analyze(current: str, proposed: str, family: str):
     cfg = RULES[family]
     rows = []
     for field in cfg["fields"]:
         pos = field["position"]
-        old, new = char_at(current, pos), char_at(proposed, pos)
+        old = extract_field_value(current, field)
+        new = extract_field_value(proposed, field)
         same = old == new
+        blocked = bool(field.get("blocked_if_different", False) and not same)
         rows.append({
             "Posição": pos,
             "Componente": field["label"],
@@ -106,6 +116,8 @@ def analyze(current: str, proposed: str, family: str):
             "Proposto": new,
             "Alterou?": "Não" if same else "Sim",
             "Resultado": field["action_if_equal"] if same else field["action_if_different"],
+            "Bloqueado": blocked,
+            "Mensagem bloqueio": field.get("block_message", "Alteração não permitida."),
         })
     violations = []
     for rule in cfg.get("special_rules", []):
@@ -120,16 +132,18 @@ def decode_code(code: str, family: str):
     value_maps = documentation.get("position_values", {})
     decoded = []
     unknown = []
-    fields = {int(item["position"]): item["label"] for item in cfg["fields"]}
-    for pos, label in fields.items():
-        value = char_at(code, pos)
+    fields = cfg["fields"]
+    for field in fields:
+        pos = int(field["position"])
+        label = field["label"]
+        value = extract_field_value(code, field)
         description = value_maps.get(str(pos), {}).get(value)
-        if pos == min(fields):
-            description = f"Modelo {code[:pos]}"
+        if field.get("extraction") == "prefix":
+            description = f"Modelo {value}"
         if not description:
             description = "Valor não documentado no PDF cadastrado"
             unknown.append(f"Posição {pos} ({label}): '{value}'")
-        decoded.append({"Posição": pos, "Componente": label, "Código": value if pos != min(fields) else code[:pos], "Configuração": description})
+        decoded.append({"Posição": pos, "Componente": label, "Código": value, "Configuração": description})
     return decoded, unknown
 
 def validate_documented_configuration(code: str, family: str):
@@ -235,6 +249,8 @@ with result_col:
                 "De": f"{row['Atual']} | {old_cfg}",
                 "Para": f"{row['Proposto']} | {new_cfg}",
                 "Análise WT": row["Resultado"],
+                "Bloqueado": row.get("Bloqueado", False),
+                "Mensagem bloqueio": row.get("Mensagem bloqueio", ""),
             })
 
         tab_summary, tab_current, tab_proposed = st.tabs([
@@ -249,18 +265,22 @@ with result_col:
 
             if changes:
                 changes_df = pd.DataFrame(changes)
+                display_changes_df = changes_df.drop(
+                    columns=["Bloqueado", "Mensagem bloqueio"],
+                    errors="ignore",
+                )
 
                 def color_wt_result(value):
                     result = str(value).strip().casefold()
                     if result == "solicitar wt":
                         return "background-color: #1f7a4d; color: #ffffff; font-weight: 700;"
-                    if result == "não solicitar wt":
+                    if result in ["não solicitar wt", "alteração não permitida"]:
                         return "background-color: #b4232f; color: #ffffff; font-weight: 700;"
                     if "verificar tecnologia" in result:
                         return "background-color: #f2c94c; color: #111111; font-weight: 700;"
                     return "background-color: #d97706; color: #ffffff; font-weight: 700;"
 
-                styled_changes = changes_df.style.map(
+                styled_changes = display_changes_df.style.map(
                     color_wt_result,
                     subset=["Análise WT"],
                 )
@@ -277,11 +297,20 @@ with result_col:
                 no_wt_count = sum(
                     item["Análise WT"] == "Não solicitar WT" for item in changes
                 )
+                blocked_count = sum(bool(item.get("Bloqueado")) for item in changes)
 
-                c1, c2, c3 = st.columns(3)
+                c1, c2, c3, c4 = st.columns(4)
                 c1.metric("Alterações", len(changes))
                 c2.metric("Sem necessidade de WT", no_wt_count)
                 c3.metric("Exigem verificação", review_count + len(wt_violations))
+                c4.metric("Não permitidas", blocked_count)
+
+                for item in changes:
+                    if item.get("Bloqueado"):
+                        st.error(
+                            f"Alteração não permitida na posição {item['Posição']} "
+                            f"({item['Componente']}): {item['Mensagem bloqueio']}"
+                        )
             else:
                 st.info("Nenhuma alteração foi identificada entre os códigos.")
 

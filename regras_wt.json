@@ -107,7 +107,10 @@
           "*": "Dados de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -248,7 +251,10 @@
           "A": "Sem acessórios"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -370,7 +376,8 @@
           "B": "Mercado Brasil",
           "A": "Mercado Argentina",
           "E": "Mercado OSA",
-          "X": "Mercado Africa"
+          "X": "Mercado Africa",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -499,7 +506,10 @@
           "0": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -1051,7 +1061,10 @@
           "G": "Filtro de carvão ativo + farol de trabalho LED + suporte para controles/monitores de implementos"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1200,7 +1213,10 @@
           "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1339,7 +1355,10 @@
           "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1489,7 +1508,10 @@
           "9": "Para-lamas dianteiro + piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1601,7 +1623,10 @@
           "V": "Preparação para piloto automático + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1712,7 +1737,10 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -1823,7 +1851,10 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -1939,7 +1970,10 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -2066,7 +2100,9 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA"
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -2186,7 +2222,9 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA"
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -2319,7 +2357,9 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA"
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -2508,7 +2548,10 @@
           "0": "Informações de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "A": "Mercado Argentina",
+          "E": "Mercado OSA",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],
@@ -2626,7 +2669,10 @@
           "G": "Filtro de carvão ativo + farol de trabalho LED + suporte para controles/monitores de implementos"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "A": "Mercado Argentina",
+          "E": "Mercado OSA",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [

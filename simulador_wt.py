@@ -5,7 +5,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Simulador WT Tratores", page_icon="🚜", layout="wide")
 BASE_DIR = Path(__file__).resolve().parent
-DOCUMENTS_DIR = BASE_DIR / "documents"
+DOCUMENTS_DIR = BASE_DIR / "documentos"
 
 @st.cache_data
 def load_rules():
@@ -140,7 +140,8 @@ def decode_code(code: str, family: str):
         label = field["label"]
         is_first = field_index == 0
         value = extract_field_value(code, field, is_first=is_first)
-        description = value_maps.get(str(pos), {}).get(value)
+        position_map = value_maps.get(str(pos), {})
+        description = position_map.get(value, position_map.get("*"))
         if field.get("extraction") == "prefix":
             description = f"Modelo {value}"
         if not description:

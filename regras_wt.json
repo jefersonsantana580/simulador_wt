@@ -10,6 +10,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(F8=\"\",\"\",IF(F8=N8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -17,6 +19,8 @@
       {
         "position": 6,
         "label": "Dados Fabr.",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(G8=\"\",\"\",IF(G8=O8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -24,6 +28,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -31,6 +37,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -38,6 +46,8 @@
       {
         "position": 9,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -45,6 +55,8 @@
       {
         "position": 10,
         "label": "Dados Fabr.",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -52,12 +64,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 5
   },
   "BH HITECH": {
     "family": "BH HITECH",
@@ -74,6 +89,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -81,6 +98,8 @@
       {
         "position": 6,
         "label": "Dados Fabr.",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -88,6 +107,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -95,6 +116,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -102,6 +125,8 @@
       {
         "position": 9,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -109,6 +134,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -116,6 +143,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -128,7 +157,8 @@
         "required_proposed": "A",
         "message": "Se o 9º dígito do código atual for 'A', o 9º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 5
   },
   "BH G4 MEC": {
     "family": "BH G4 MEC",
@@ -145,6 +175,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -152,6 +184,8 @@
       {
         "position": 6,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -159,6 +193,8 @@
       {
         "position": 7,
         "label": "Dados Fabr.",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -166,6 +202,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -173,6 +211,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -180,6 +220,8 @@
       {
         "position": 10,
         "label": "Tecnologia/acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -187,6 +229,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=W8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -199,7 +243,8 @@
         "required_proposed": "C",
         "message": "Se o 10º dígito do código atual for 'C', o 10º dígito do proposto deve ser 'C'."
       }
-    ]
+    ],
+    "model_prefix_length": 5
   },
   "A2R": {
     "family": "A2R",
@@ -214,6 +259,8 @@
       {
         "position": 4,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -221,6 +268,8 @@
       {
         "position": 5,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -228,6 +277,8 @@
       {
         "position": 6,
         "label": "Sist injeção",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -235,6 +286,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=T8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -242,6 +295,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -249,6 +304,8 @@
       {
         "position": 9,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -256,6 +313,8 @@
       {
         "position": 10,
         "label": "Dados fábrica",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=W8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -263,12 +322,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=X8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 4
   },
   "TCVT": {
     "family": "TCVT",
@@ -283,6 +345,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -290,6 +354,8 @@
       {
         "position": 6,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -297,6 +363,8 @@
       {
         "position": 7,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -304,6 +372,8 @@
       {
         "position": 8,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -311,6 +381,8 @@
       {
         "position": 9,
         "label": "Transm CVT",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -318,6 +390,8 @@
       {
         "position": 10,
         "label": "Marca pneu",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -325,6 +399,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -337,7 +413,8 @@
         "required_proposed": "A",
         "message": "Se o 8º dígito do código atual for 'A', o 8º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 5
   },
   "MF 7700": {
     "family": "MF 7700",
@@ -352,6 +429,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -359,6 +438,8 @@
       {
         "position": 6,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -366,6 +447,8 @@
       {
         "position": 7,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -373,6 +456,8 @@
       {
         "position": 8,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -380,6 +465,8 @@
       {
         "position": 9,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -387,6 +474,8 @@
       {
         "position": 10,
         "label": "Marca pneu",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -394,6 +483,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -506,7 +597,8 @@
           "message": "Pacote Standard está documentado apenas para o modelo MF 7719."
         }
       ]
-    }
+    },
+    "model_prefix_length": 5
   },
   "MF 7300": {
     "family": "MF 7300",
@@ -519,6 +611,8 @@
       {
         "position": 6,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 6,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=O8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -526,6 +620,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -533,6 +629,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=Q8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -540,6 +638,8 @@
       {
         "position": 9,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=R8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -547,6 +647,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -554,6 +656,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -566,7 +670,8 @@
         "required_proposed": "A",
         "message": "Se o 9º dígito do código atual for 'A', o 9º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 6
   },
   "A3F": {
     "family": "A3F",
@@ -605,6 +710,8 @@
       {
         "position": 4,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -612,6 +719,8 @@
       {
         "position": 5,
         "label": "Tração",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -619,6 +728,8 @@
       {
         "position": 6,
         "label": "Plat ou cab",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -626,6 +737,8 @@
       {
         "position": 7,
         "label": "Escapamento",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -633,6 +746,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=U8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -640,6 +755,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar tipo de Troca rodagem",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Analisar tipo de Troca rodagem\"))"
@@ -647,6 +764,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar Tipo de acessório",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=W8,\"Solicitar WT\",\"Analisar Tipo de acessório\"))"
@@ -654,12 +773,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=X8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 4
   },
   "A4S": {
     "family": "A4S",
@@ -674,6 +796,8 @@
       {
         "position": 4,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -681,6 +805,8 @@
       {
         "position": 5,
         "label": "Tração 4x4",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -688,6 +814,8 @@
       {
         "position": 6,
         "label": "Plat ou Cab",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -695,6 +823,8 @@
       {
         "position": 7,
         "label": "Reversor",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=T8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -702,6 +832,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=U8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -709,6 +841,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -716,6 +850,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar Tipo de acessório",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=W8,\"Solicitar WT\",\"Analisar Tipo de acessório\"))"
@@ -723,6 +859,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=X8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -735,7 +873,8 @@
         "required_proposed": "A",
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 4
   },
   "A4M": {
     "family": "A4M",
@@ -748,6 +887,8 @@
       {
         "position": 4,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -755,6 +896,8 @@
       {
         "position": 5,
         "label": "Tração 4x4",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -762,6 +905,8 @@
       {
         "position": 6,
         "label": "Plat ou Cab",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -769,6 +914,8 @@
       {
         "position": 7,
         "label": "Reversor",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=T8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -776,6 +923,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=U8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -783,6 +932,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -790,6 +941,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar Tipo de acessório",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=W8,\"Solicitar WT\",\"Analisar Tipo de acessório\"))"
@@ -797,6 +950,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=X8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -809,7 +964,8 @@
         "required_proposed": "A",
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 4
   },
   "A4L": {
     "family": "A4L",
@@ -824,6 +980,8 @@
       {
         "position": 4,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -831,6 +989,8 @@
       {
         "position": 5,
         "label": "Tração 4x4",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -838,6 +998,8 @@
       {
         "position": 6,
         "label": "Plat ou Cab",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -845,6 +1007,8 @@
       {
         "position": 7,
         "label": "Reversor",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=T8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -852,6 +1016,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=U8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -859,6 +1025,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -866,6 +1034,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar Tipo de acessório",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=W8,\"Solicitar WT\",\"Analisar Tipo de acessório\"))"
@@ -873,6 +1043,8 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(O8=\"\",\"\",IF(O8=X8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -885,7 +1057,8 @@
         "required_proposed": "A",
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
-    ]
+    ],
+    "model_prefix_length": 4
   },
   "A4 HITECH": {
     "family": "A4 HITECH",
@@ -899,6 +1072,8 @@
       {
         "position": 7,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 7,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=N8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -906,6 +1081,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=O8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -913,6 +1090,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=P8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -920,6 +1099,8 @@
       {
         "position": 10,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=Q8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -927,12 +1108,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 7
   },
   "3300": {
     "family": "3300",
@@ -948,6 +1132,8 @@
       {
         "position": 6,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 6,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=O8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -955,6 +1141,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -962,6 +1150,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=Q8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -969,6 +1159,8 @@
       {
         "position": 9,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=R8,\"Solicitar WT\",\"Verificar Tecnologia\"))"
@@ -976,6 +1168,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -983,12 +1177,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 6
   },
   "4300": {
     "family": "4300",
@@ -1007,6 +1204,8 @@
       {
         "position": 6,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 6,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=O8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1014,6 +1213,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1021,6 +1222,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=Q8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1028,6 +1231,8 @@
       {
         "position": 9,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar tipo de acessórios",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=R8,\"Solicitar WT\",\"Verificar tipo de acessórios\"))"
@@ -1035,6 +1240,8 @@
       {
         "position": 10,
         "label": "Telemetria",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar Telemetria",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=S8,\"Solicitar WT\",\"Verificar Telemetria\"))"
@@ -1042,12 +1249,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 6
   },
   "4400": {
     "family": "4400",
@@ -1063,6 +1273,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1070,6 +1282,8 @@
       {
         "position": 6,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1077,6 +1291,8 @@
       {
         "position": 7,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1084,6 +1300,8 @@
       {
         "position": 8,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1091,6 +1309,8 @@
       {
         "position": 9,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1098,6 +1318,8 @@
       {
         "position": 10,
         "label": "Vazio",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1105,12 +1327,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 5
   },
   "4700": {
     "family": "4700",
@@ -1130,6 +1355,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1137,6 +1364,8 @@
       {
         "position": 6,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1144,6 +1373,8 @@
       {
         "position": 7,
         "label": "---",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1151,6 +1382,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1158,6 +1391,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1165,6 +1400,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar tipo de acessórios",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Verificar tipo de acessórios\"))"
@@ -1172,12 +1409,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 5
   },
   "5700": {
     "family": "5700",
@@ -1196,6 +1436,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1203,6 +1445,8 @@
       {
         "position": 6,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1210,6 +1454,8 @@
       {
         "position": 7,
         "label": "---",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1217,6 +1463,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1224,6 +1472,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1231,6 +1481,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Verificar tipo de acessórios",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Verificar tipo de acessórios\"))"
@@ -1238,12 +1490,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 5
   },
   "6700": {
     "family": "6700",
@@ -1262,6 +1517,8 @@
       {
         "position": 5,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 5,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=P8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1269,6 +1526,8 @@
       {
         "position": 6,
         "label": "Cab ou plat",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=Q8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1276,6 +1535,8 @@
       {
         "position": 7,
         "label": "---",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1283,6 +1544,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=S8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1290,6 +1553,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=T8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1297,6 +1562,8 @@
       {
         "position": 10,
         "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar detalhe de alteração",
         "source_formula": "=IF(M8=\"\",\"\",IF(M8=U8,\"Solicitar WT\",\"Analisar detalhe de alteração\"))"
@@ -1304,12 +1571,15 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(N8=\"\",\"\",IF(N8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 5
   },
   "6700R": {
     "family": "6700R",
@@ -1323,6 +1593,8 @@
       {
         "position": 7,
         "label": "Modelo",
+        "extraction": "prefix",
+        "length": 7,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(H8=\"\",\"\",IF(H8=N8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1330,6 +1602,8 @@
       {
         "position": 8,
         "label": "Pacote vendas",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Não solicitar WT",
         "source_formula": "=IF(I8=\"\",\"\",IF(I8=O8,\"Solicitar WT\",\"Não solicitar WT\"))"
@@ -1337,6 +1611,8 @@
       {
         "position": 9,
         "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(J8=\"\",\"\",IF(J8=P8,\"Solicitar WT\",\"Solicitar WT\"))"
@@ -1344,6 +1620,8 @@
       {
         "position": 10,
         "label": "Tecnologia",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Analisar tecnologia",
         "source_formula": "=IF(K8=\"\",\"\",IF(K8=Q8,\"Solicitar WT\",\"Analisar tecnologia\"))"
@@ -1351,11 +1629,14 @@
       {
         "position": 11,
         "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
         "action_if_equal": "Solicitar WT",
         "action_if_different": "Solicitar WT",
         "source_formula": "=IF(L8=\"\",\"\",IF(L8=R8,\"Solicitar WT\",\"Solicitar WT\"))"
       }
     ],
-    "special_rules": []
+    "special_rules": [],
+    "model_prefix_length": 7
   }
 }

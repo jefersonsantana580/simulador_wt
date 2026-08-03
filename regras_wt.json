@@ -406,7 +406,107 @@
         "required_proposed": "U",
         "message": "Se o 8º dígito do código atual for 'U', o 8º dígito do proposto deve ser 'U'."
       }
-    ]
+    ],
+    "documentation": {
+      "title": "Série MF 7700 Dyna-6 - Lógicas dos Pacotes de Vendas",
+      "pdf_file": "IP_Tratores Série MF 7700 Dyna-6 Lógicas dos Pacotes de Vendas.pdf",
+      "position_values": {
+        "6": {
+          "1": "Pacote Standard",
+          "2": "Pacote Standard",
+          "F": "Pacote Efficient",
+          "M": "Pacote Exclusive",
+          "W": "Pacote Transbordo"
+        },
+        "7": {
+          "E": "Rodagem: dianteiro 16.9-28 R1; traseiro 24.5-32 R1",
+          "R": "Rodagem: dianteiro 16.9-28 R1; traseiro 30.5-32 R1",
+          "Q": "Rodagem: dianteiro 600/65R28; traseiro 710/70R38",
+          "N": "Rodagem: dianteiro 16.9-30 R1; traseiro 20.8-42 R1 duplo",
+          "0": "Rodagem: dianteiro 600/65R28 R1; traseiro 520/85R42 R1 duplo",
+          "3": "Rodagem: dianteiro 18.4-26 R2; traseiro 20.8-42 R2 duplo",
+          "4": "Rodagem: dianteiro 420/90R30 R2; traseiro 520/85R42 R2 duplo"
+        },
+        "8": {
+          "U": "Sem piloto automático + Massey Connect",
+          "B": "Preparação para piloto automático",
+          "M": "Piloto automático decimétrico Trimble + Massey Connect",
+          "N": "Piloto automático centimétrico Trimble + rádio RTK Trimble + Massey Connect",
+          "V": "Preparação para piloto automático + Massey Connect",
+          "W": "Piloto automático centimétrico Trimble + rádio RTK Trimble + base RTK MR-2 + Massey Connect"
+        },
+        "9": {
+          "0": "Sem acessórios (interpretação conforme a seção de acessórios do informe; validar em homologação)"
+        },
+        "10": {
+          "M": "Pneu Michelin",
+          "G": "Pneu Standard, conforme disponibilidade",
+          "F": "Pneu Standard, conforme disponibilidade",
+          "P": "Pneu Standard, conforme disponibilidade"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "compatibility_rules": [
+        {
+          "conditions": [
+            {
+              "position": 6,
+              "value": "1"
+            },
+            {
+              "position": 8,
+              "value": "U"
+            }
+          ],
+          "message": "Combinação documentada: pacote Standard '1' com tecnologia 'U'."
+        },
+        {
+          "conditions": [
+            {
+              "position": 6,
+              "value": "2"
+            },
+            {
+              "position": 8,
+              "value": "B"
+            }
+          ],
+          "message": "Combinação documentada: pacote Standard '2' com tecnologia 'B'."
+        }
+      ],
+      "restrictions": [
+        {
+          "position": 8,
+          "value": "U",
+          "required": {
+            "position": 6,
+            "value": "1"
+          },
+          "message": "Tecnologia 'U' somente está documentada para o pacote Standard '1'."
+        },
+        {
+          "position": 8,
+          "value": "B",
+          "required": {
+            "position": 6,
+            "value": "2"
+          },
+          "message": "Tecnologia 'B' somente está documentada para o pacote Standard '2'."
+        },
+        {
+          "position": 6,
+          "values": [
+            "1",
+            "2"
+          ],
+          "model_prefix": "7719",
+          "message": "Pacote Standard está documentado apenas para o modelo MF 7719."
+        }
+      ]
+    }
   },
   "MF 7300": {
     "family": "MF 7300",

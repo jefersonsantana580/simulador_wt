@@ -164,127 +164,148 @@ def pdf_status(family: str):
 st.title("🚜 Simulador WT e Decodificador de Configuração")
 st.caption("Identifica a família, compara códigos, aplica as regras de WT e descreve a configuração documentada.")
 
-left, right = st.columns(2)
-with left:
-    current = clean_code(st.text_input("Código atual", placeholder="Ex.: 7725KF0M0FB"))
-with right:
-    proposed = clean_code(st.text_input("Código proposto", placeholder="Ex.: 7725KF0K0ME"))
+input_col, result_col = st.columns([0.34, 0.66], gap="large")
 
-if st.button("Analisar e decodificar", type="primary", use_container_width=True):
-    if not current or not proposed:
-        st.error("Preencha o código atual e o código proposto.")
-        st.stop()
-
-    id_current, id_proposed = identify(current), identify(proposed)
-    if not id_current or not id_proposed:
-        st.error("Um dos códigos não corresponde a nenhum modelo cadastrado.")
-        st.stop()
-    if id_current["family"] != id_proposed["family"]:
-        st.error(
-            f"Os códigos pertencem a famílias diferentes: {id_current['family']} e "
-            f"{id_proposed['family']}. A comparação foi bloqueada."
+with input_col:
+    st.subheader("Códigos para análise")
+    current = clean_code(
+        st.text_input(
+            "Código atual",
+            placeholder="Ex.: 7725KM0M0FB",
         )
-        st.stop()
+    )
+    proposed = clean_code(
+        st.text_input(
+            "Código proposto",
+            placeholder="Ex.: 7725KF0K0ME",
+        )
+    )
+    analyze_clicked = st.button(
+        "Analisar e decodificar",
+        type="primary",
+        use_container_width=True,
+    )
 
-    family = id_current["family"]
-    min_len = RULES[family]["minimum_length"]
-    if len(current) < min_len or len(proposed) < min_len:
-        st.error(f"Para {family}, os códigos precisam ter pelo menos {min_len} caracteres.")
-        st.stop()
+with result_col:
+    if not analyze_clicked:
+        st.subheader("Resultado da análise")
+        st.info("Informe os códigos ao lado e clique em **Analisar e decodificar**.")
 
-    wt_rows, wt_violations = analyze(current, proposed, family)
-    current_decoded, current_unknown = decode_code(current, family)
-    proposed_decoded, proposed_unknown = decode_code(proposed, family)
-    current_alerts = validate_documented_configuration(current, family)
-    proposed_alerts = validate_documented_configuration(proposed, family)
+    if analyze_clicked:
+        if not current or not proposed:
+            st.error("Preencha o código atual e o código proposto.")
+            st.stop()
 
-    current_by_position = {row["Posição"]: row for row in current_decoded}
-    proposed_by_position = {row["Posição"]: row for row in proposed_decoded}
-
-    changes = []
-    for row in wt_rows:
-        if row["Alterou?"] != "Sim":
-            continue
-        position = row["Posição"]
-        old_cfg = current_by_position.get(position, {}).get("Configuração", "Não documentado")
-        new_cfg = proposed_by_position.get(position, {}).get("Configuração", "Não documentado")
-        changes.append({
-            "Posição": position,
-            "Componente": row["Componente"],
-            "De": f"{row['Atual']} | {old_cfg}",
-            "Para": f"{row['Proposto']} | {new_cfg}",
-            "Análise WT": row["Resultado"],
-        })
-
-    tab_summary, tab_current, tab_proposed = st.tabs([
-        "Resumo das alterações",
-        "Configuração atual",
-        "Configuração proposta",
-    ])
-
-    with tab_summary:
-        st.subheader("Resumo das alterações")
-        st.caption(f"{family} | {current} → {proposed}")
-
-        if changes:
-            changes_df = pd.DataFrame(changes)
-            st.dataframe(changes_df, use_container_width=True, hide_index=True)
-
-            review_count = sum(
-                item["Análise WT"] not in ["Solicitar WT", "Não solicitar WT"]
-                for item in changes
+        id_current, id_proposed = identify(current), identify(proposed)
+        if not id_current or not id_proposed:
+            st.error("Um dos códigos não corresponde a nenhum modelo cadastrado.")
+            st.stop()
+        if id_current["family"] != id_proposed["family"]:
+            st.error(
+                f"Os códigos pertencem a famílias diferentes: {id_current['family']} e "
+                f"{id_proposed['family']}. A comparação foi bloqueada."
             )
-            no_wt_count = sum(
-                item["Análise WT"] == "Não solicitar WT" for item in changes
-            )
+            st.stop()
 
-            c1, c2, c3 = st.columns(3)
-            c1.metric("Alterações", len(changes))
-            c2.metric("Sem necessidade de WT", no_wt_count)
-            c3.metric("Exigem verificação", review_count + len(wt_violations))
-        else:
-            st.info("Nenhuma alteração foi identificada entre os códigos.")
+        family = id_current["family"]
+        min_len = RULES[family]["minimum_length"]
+        if len(current) < min_len or len(proposed) < min_len:
+            st.error(f"Para {family}, os códigos precisam ter pelo menos {min_len} caracteres.")
+            st.stop()
 
-        for message in wt_violations:
-            st.error(f"Regra de WT: {message}")
-        for message in current_alerts:
-            st.warning(f"Código atual: {message}")
-        for message in proposed_alerts:
-            st.warning(f"Código proposto: {message}")
+        wt_rows, wt_violations = analyze(current, proposed, family)
+        current_decoded, current_unknown = decode_code(current, family)
+        proposed_decoded, proposed_unknown = decode_code(proposed, family)
+        current_alerts = validate_documented_configuration(current, family)
+        proposed_alerts = validate_documented_configuration(proposed, family)
 
-        changed_positions = {item["Posição"] for item in changes}
-        for decoded_row in proposed_decoded:
-            if (
-                decoded_row["Posição"] in changed_positions
-                and decoded_row["Configuração"] == "Valor não documentado no PDF cadastrado"
-            ):
-                st.warning(
-                    f"Valor proposto não documentado: posição {decoded_row['Posição']} "
-                    f"({decoded_row['Componente']}) = '{decoded_row['Código']}'."
+        current_by_position = {row["Posição"]: row for row in current_decoded}
+        proposed_by_position = {row["Posição"]: row for row in proposed_decoded}
+
+        changes = []
+        for row in wt_rows:
+            if row["Alterou?"] != "Sim":
+                continue
+            position = row["Posição"]
+            old_cfg = current_by_position.get(position, {}).get("Configuração", "Não documentado")
+            new_cfg = proposed_by_position.get(position, {}).get("Configuração", "Não documentado")
+            changes.append({
+                "Posição": position,
+                "Componente": row["Componente"],
+                "De": f"{row['Atual']} | {old_cfg}",
+                "Para": f"{row['Proposto']} | {new_cfg}",
+                "Análise WT": row["Resultado"],
+            })
+
+        tab_summary, tab_current, tab_proposed = st.tabs([
+            "Resumo das alterações",
+            "Configuração atual",
+            "Configuração proposta",
+        ])
+
+        with tab_summary:
+            st.subheader("Resumo das alterações")
+            st.caption(f"{family} | {current} → {proposed}")
+
+            if changes:
+                changes_df = pd.DataFrame(changes)
+                st.dataframe(changes_df, use_container_width=True, hide_index=True)
+
+                review_count = sum(
+                    item["Análise WT"] not in ["Solicitar WT", "Não solicitar WT"]
+                    for item in changes
+                )
+                no_wt_count = sum(
+                    item["Análise WT"] == "Não solicitar WT" for item in changes
                 )
 
-    with tab_current:
-        st.subheader("Configuração atual")
-        st.caption(current)
-        st.dataframe(
-            pd.DataFrame(current_decoded),
-            use_container_width=True,
-            hide_index=True,
-        )
-        for message in current_alerts:
-            st.warning(message)
-        for message in current_unknown:
-            st.warning(f"Não documentado: {message}")
+                c1, c2, c3 = st.columns(3)
+                c1.metric("Alterações", len(changes))
+                c2.metric("Sem necessidade de WT", no_wt_count)
+                c3.metric("Exigem verificação", review_count + len(wt_violations))
+            else:
+                st.info("Nenhuma alteração foi identificada entre os códigos.")
 
-    with tab_proposed:
-        st.subheader("Configuração proposta")
-        st.caption(proposed)
-        st.dataframe(
-            pd.DataFrame(proposed_decoded),
-            use_container_width=True,
-            hide_index=True,
-        )
-        for message in proposed_alerts:
-            st.warning(message)
-        for message in proposed_unknown:
-            st.warning(f"Não documentado: {message}")
+            for message in wt_violations:
+                st.error(f"Regra de WT: {message}")
+            for message in current_alerts:
+                st.warning(f"Código atual: {message}")
+            for message in proposed_alerts:
+                st.warning(f"Código proposto: {message}")
+
+            changed_positions = {item["Posição"] for item in changes}
+            for decoded_row in proposed_decoded:
+                if (
+                    decoded_row["Posição"] in changed_positions
+                    and decoded_row["Configuração"] == "Valor não documentado no PDF cadastrado"
+                ):
+                    st.warning(
+                        f"Valor proposto não documentado: posição {decoded_row['Posição']} "
+                        f"({decoded_row['Componente']}) = '{decoded_row['Código']}'."
+                    )
+
+        with tab_current:
+            st.subheader("Configuração atual")
+            st.caption(current)
+            st.dataframe(
+                pd.DataFrame(current_decoded),
+                use_container_width=True,
+                hide_index=True,
+            )
+            for message in current_alerts:
+                st.warning(message)
+            for message in current_unknown:
+                st.warning(f"Não documentado: {message}")
+
+        with tab_proposed:
+            st.subheader("Configuração proposta")
+            st.caption(proposed)
+            st.dataframe(
+                pd.DataFrame(proposed_decoded),
+                use_container_width=True,
+                hide_index=True,
+            )
+            for message in proposed_alerts:
+                st.warning(message)
+            for message in proposed_unknown:
+                st.warning(f"Não documentado: {message}")

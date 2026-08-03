@@ -865,8 +865,9 @@
         "extraction": "character",
         "length": 1,
         "action_if_equal": "Solicitar WT",
-        "action_if_different": "Analisar tipo de Troca rodagem",
-        "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Solicitar WT\"))"
+        "action_if_different": "Solicitar WT",
+        "source_formula": "=IF(M8=\"\",\"\",IF(M8=V8,\"Solicitar WT\",\"Analisar tipo de Troca rodagem\"))",
+        "rule_note": "Regra ajustada: qualquer alteração na rodagem da família A3F deve retornar Solicitar WT."
       },
       {
         "position": 10,

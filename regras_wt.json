@@ -72,7 +72,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "BM G4",
+      "pdf_file": "bm_g4.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "BH HITECH": {
     "family": "BH HITECH",
@@ -158,7 +164,13 @@
         "message": "Se o 9º dígito do código atual for 'A', o 9º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "BH HITECH",
+      "pdf_file": "bh_hitech.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "BH G4 MEC": {
     "family": "BH G4 MEC",
@@ -244,7 +256,13 @@
         "message": "Se o 10º dígito do código atual for 'C', o 10º dígito do proposto deve ser 'C'."
       }
     ],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "BH G4 MEC",
+      "pdf_file": "bh_g4.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A2R": {
     "family": "A2R",
@@ -330,7 +348,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 4
+    "model_prefix_length": 4,
+    "documentation": {
+      "title": "A2R",
+      "pdf_file": "a2r.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "TCVT": {
     "family": "TCVT",
@@ -414,7 +438,13 @@
         "message": "Se o 8º dígito do código atual for 'A', o 8º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "TCVT",
+      "pdf_file": "tcvt.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "MF 7700": {
     "family": "MF 7700",
@@ -500,7 +530,7 @@
     ],
     "documentation": {
       "title": "Série MF 7700 Dyna-6 - Lógicas dos Pacotes de Vendas",
-      "pdf_file": "IP_Tratores Série MF 7700 Dyna-6 Lógicas dos Pacotes de Vendas.pdf",
+      "pdf_file": "mf_7700_dyna6.pdf",
       "position_values": {
         "6": {
           "1": "Pacote Standard",
@@ -671,7 +701,13 @@
         "message": "Se o 9º dígito do código atual for 'A', o 9º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 6
+    "model_prefix_length": 6,
+    "documentation": {
+      "title": "MF 7300",
+      "pdf_file": "mf_7300_dyna3.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A3F": {
     "family": "A3F",
@@ -781,7 +817,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 4
+    "model_prefix_length": 4,
+    "documentation": {
+      "title": "A3F",
+      "pdf_file": "a3f.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A4S": {
     "family": "A4S",
@@ -874,7 +916,13 @@
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 4
+    "model_prefix_length": 4,
+    "documentation": {
+      "title": "A4S",
+      "pdf_file": "a4s.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A4M": {
     "family": "A4M",
@@ -965,7 +1013,13 @@
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 4
+    "model_prefix_length": 4,
+    "documentation": {
+      "title": "A4M",
+      "pdf_file": "a4m.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A4L": {
     "family": "A4L",
@@ -1058,7 +1112,13 @@
         "message": "Se o 10º dígito do código atual for 'A', o 10º dígito do proposto deve ser 'A'."
       }
     ],
-    "model_prefix_length": 4
+    "model_prefix_length": 4,
+    "documentation": {
+      "title": "A4L",
+      "pdf_file": "a4l.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "A4 HITECH": {
     "family": "A4 HITECH",
@@ -1116,7 +1176,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 7
+    "model_prefix_length": 7,
+    "documentation": {
+      "title": "A4 HITECH",
+      "pdf_file": "a4_hitech.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "3300": {
     "family": "3300",
@@ -1185,7 +1251,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 6
+    "model_prefix_length": 6,
+    "documentation": {
+      "title": "3300",
+      "pdf_file": "mf_3300_xtra.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "4300": {
     "family": "4300",
@@ -1257,7 +1329,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 6
+    "model_prefix_length": 6,
+    "documentation": {
+      "title": "4300",
+      "pdf_file": "mf_4300.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "4400": {
     "family": "4400",
@@ -1335,7 +1413,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "4400",
+      "pdf_file": "mf_4400.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "4700": {
     "family": "4700",
@@ -1417,7 +1501,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "4700",
+      "pdf_file": "mf_4700.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "5700": {
     "family": "5700",
@@ -1498,7 +1588,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "5700",
+      "pdf_file": "mf_5700.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "6700": {
     "family": "6700",
@@ -1579,7 +1675,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 5
+    "model_prefix_length": 5,
+    "documentation": {
+      "title": "6700",
+      "pdf_file": "mf_6700.pdf",
+      "position_values": {},
+      "restrictions": []
+    }
   },
   "6700R": {
     "family": "6700R",
@@ -1637,6 +1739,13 @@
       }
     ],
     "special_rules": [],
-    "model_prefix_length": 7
+    "model_prefix_length": 7,
+    "documentation": {
+      "title": "6700R",
+      "pdf_file": null,
+      "position_values": {},
+      "restrictions": [],
+      "note": "PDF ainda não associado. Confirmar se mf_6700.pdf cobre também a família 6700R."
+    }
   }
 }

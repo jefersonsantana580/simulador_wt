@@ -496,7 +496,7 @@
           "P": "Com para-lamas dianteiro"
         },
         "10": {
-          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+          "0": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
           "B": "Mercado Brasil"
@@ -623,7 +623,10 @@
           "*": "Dados adicionais de fábrica, caractere restrito à fábrica"
         },
         "11": {
-          "B": "Mercado Brasil"
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado KAM"
         }
       },
       "restrictions": [],
@@ -751,7 +754,9 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA"
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [
@@ -886,7 +891,9 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA"
+          "E": "Mercado OSA",
+          "A": "Mercado Argentina",
+          "K": "Mercado Kam"
         }
       },
       "restrictions": [],

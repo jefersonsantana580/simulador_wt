@@ -93,9 +93,9 @@ def char_at(code: str, position: int) -> str:
     return code[position - 1] if len(code) >= position else ""
 
 
-def extract_field_value(code: str, field: dict) -> str:
-    """Replica a logica do Excel: o primeiro campo usa LEFT e os demais usam MID."""
-    if field.get("extraction") == "prefix":
+def extract_field_value(code: str, field: dict, is_first: bool = False) -> str:
+    """Replica o Excel: primeiro campo = LEFT; demais campos = MID de um caractere."""
+    if is_first or field.get("extraction") == "prefix":
         length = int(field.get("length", field["position"]))
         return code[:length] if len(code) >= length else code
     return char_at(code, int(field["position"]))
@@ -103,14 +103,16 @@ def extract_field_value(code: str, field: dict) -> str:
 def analyze(current: str, proposed: str, family: str):
     cfg = RULES[family]
     rows = []
-    for field in cfg["fields"]:
+    for field_index, field in enumerate(cfg["fields"]):
         pos = field["position"]
-        old = extract_field_value(current, field)
-        new = extract_field_value(proposed, field)
+        is_first = field_index == 0
+        old = extract_field_value(current, field, is_first=is_first)
+        new = extract_field_value(proposed, field, is_first=is_first)
         same = old == new
         blocked = bool(field.get("blocked_if_different", False) and not same)
         rows.append({
-            "Posição": pos,
+            "Posição": f"1 a {pos}" if is_first else pos,
+            "Posição numérica": pos,
             "Componente": field["label"],
             "Atual": old,
             "Proposto": new,
@@ -133,10 +135,11 @@ def decode_code(code: str, family: str):
     decoded = []
     unknown = []
     fields = cfg["fields"]
-    for field in fields:
+    for field_index, field in enumerate(fields):
         pos = int(field["position"])
         label = field["label"]
-        value = extract_field_value(code, field)
+        is_first = field_index == 0
+        value = extract_field_value(code, field, is_first=is_first)
         description = value_maps.get(str(pos), {}).get(value)
         if field.get("extraction") == "prefix":
             description = f"Modelo {value}"
@@ -240,11 +243,13 @@ with result_col:
         for row in wt_rows:
             if row["Alterou?"] != "Sim":
                 continue
-            position = row["Posição"]
+            position = row["Posição numérica"]
+            position_display = row["Posição"]
             old_cfg = current_by_position.get(position, {}).get("Configuração", "Não documentado")
             new_cfg = proposed_by_position.get(position, {}).get("Configuração", "Não documentado")
             changes.append({
-                "Posição": position,
+                "Posição": position_display,
+                "Posição numérica": position,
                 "Componente": row["Componente"],
                 "De": f"{row['Atual']} | {old_cfg}",
                 "Para": f"{row['Proposto']} | {new_cfg}",
@@ -266,7 +271,7 @@ with result_col:
             if changes:
                 changes_df = pd.DataFrame(changes)
                 display_changes_df = changes_df.drop(
-                    columns=["Bloqueado", "Mensagem bloqueio"],
+                    columns=["Posição numérica", "Bloqueado", "Mensagem bloqueio"],
                     errors="ignore",
                 )
 
@@ -321,7 +326,7 @@ with result_col:
             for message in proposed_alerts:
                 st.warning(f"Código proposto: {message}")
 
-            changed_positions = {item["Posição"] for item in changes}
+            changed_positions = {item["Posição numérica"] for item in changes}
             for decoded_row in proposed_decoded:
                 if (
                     decoded_row["Posição"] in changed_positions

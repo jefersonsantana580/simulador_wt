@@ -890,10 +890,64 @@
     "special_rules": [],
     "model_prefix_length": 4,
     "documentation": {
-      "title": "A3F",
+      "title": "Série A3F - Lógica de códigos comerciais",
       "pdf_file": "a3f.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "4": {
+          "F": "Característica Fruteiro"
+        },
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabine"
+        },
+        "7": {
+          "D": "Escapamento para baixo",
+          "U": "Escapamento para cima"
+        },
+        "8": {
+          "A": "Pacote Basic 1",
+          "B": "Pacote Basic 2",
+          "1": "Pacote Classic 1",
+          "2": "Pacote Classic 2",
+          "3": "Pacote Classic 3"
+        },
+        "9": {
+          "D": "Rodagem anterior: dianteiro 250/80-18 R1; traseiro 14.9-24 R1",
+          "X": "Rodagem nova: dianteiro 250/80-18 R1; traseiro 14.9-24 R1, roda dianteira com ajuste de bitola",
+          "R": "Rodagem anterior: dianteiro 250/80-18 R1; traseiro 380/85 R24",
+          "W": "Rodagem nova: dianteiro 250/80-18 R1; traseiro 380/85 R24, roda dianteira com ajuste de bitola",
+          "9": "Rodagem anterior: dianteiro 8.00-18 R1; traseiro 14.9-24 R1",
+          "F": "Rodagem nova: dianteiro 8.00-18 R1; traseiro 14.9-24 R1, roda dianteira com ajuste de bitola",
+          "H": "Rodagem anterior: dianteiro 8.00-18 R1 6PR; traseiro 14.9-26 R1 6PR",
+          "G": "Rodagem nova: dianteiro 8.00-18 R1 6PR; traseiro 14.9-26 R1 6PR, roda dianteira com ajuste de bitola"
+        },
+        "10": {
+          "A": "Sem acessórios",
+          "C": "Filtro de carvão ativo",
+          "G": "Filtro de carvão ativo + farol de trabalho LED + suporte para controles/monitores de implementos"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 10,
+          "values": [
+            "C",
+            "G"
+          ],
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Os acessórios C e G estão documentados apenas para a versão cabinada."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 03/25, edição 01, de 29/01/2025."
     }
   },
   "A4S": {
@@ -989,10 +1043,60 @@
     ],
     "model_prefix_length": 4,
     "documentation": {
-      "title": "A4S",
+      "title": "Série A4S - Lógica de códigos comerciais",
       "pdf_file": "a4s.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "T": "Reversor mecânico",
+          "0": "Reversor eletro-hidráulico"
+        },
+        "8": {
+          "B": "Pacote Basic 2",
+          "C": "Pacote Basic 3",
+          "1": "Pacote Classic 1",
+          "2": "Pacote Classic 2",
+          "3": "Pacote Classic 3"
+        },
+        "9": {
+          "I": "Rodagem: dianteiro 11.2-28 R1; traseiro 13.6-38 R1",
+          "S": "Rodagem: dianteiro 12.4-24 R1; traseiro 18.4-30 R1",
+          "2": "Rodagem Heavy Duty: dianteiro 12.4-24 R1; traseiro 18.4-30 R1",
+          "A": "Rodagem: dianteiro 13.6-24 R1; traseiro 18.4-34 R1"
+        },
+        "10": {
+          "A": "Sem acessórios",
+          "B": "Creeper",
+          "P": "Para-lamas dianteiro",
+          "1": "Creeper + para-lamas dianteiro",
+          "2": "Piloto elétrico Valtra Guide by Trimble",
+          "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 10,
+          "values": [
+            "2",
+            "7"
+          ],
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Piloto elétrico Valtra Guide está documentado apenas para tratores cabinados."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 04/25, edição 01, de 29/01/2025."
     }
   },
   "A4M": {
@@ -1086,10 +1190,52 @@
     ],
     "model_prefix_length": 4,
     "documentation": {
-      "title": "A4M",
+      "title": "Série A4M - Lógica de códigos comerciais",
       "pdf_file": "a4m.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "0": "Reversor eletro-hidráulico Power Shuttle"
+        },
+        "8": {
+          "2": "Pacote Classic II",
+          "3": "Pacote Classic III"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1"
+        },
+        "10": {
+          "A": "Sem acessórios",
+          "B": "Creeper",
+          "P": "Para-lamas dianteiro",
+          "2": "Piloto elétrico Valtra Guide by Trimble",
+          "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 10,
+          "values": [
+            "2",
+            "7"
+          ],
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Piloto elétrico Valtra Guide está documentado apenas para tratores cabinados."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 06/25, edição 01, de 29/01/2025."
     }
   },
   "A4L": {

@@ -710,12 +710,12 @@
       }
     ],
     "documentation": {
-      "title": "Série MF 7700 Dyna-6 - Lógicas dos Pacotes de Vendas",
+      "title": "Série MF 7700 Dyna-6 - Lógicas dos pacotes de vendas",
       "pdf_file": "mf_7700_dyna6.pdf",
       "position_values": {
         "6": {
-          "1": "Pacote Standard",
-          "2": "Pacote Standard",
+          "1": "Pacote Standard 1",
+          "2": "Pacote Standard 2",
           "F": "Pacote Efficient",
           "M": "Pacote Exclusive",
           "W": "Pacote Transbordo"
@@ -738,7 +738,7 @@
           "W": "Piloto automático centimétrico Trimble + rádio RTK Trimble + base RTK MR-2 + Massey Connect"
         },
         "9": {
-          "0": "Sem acessórios (interpretação conforme a seção de acessórios do informe; validar em homologação)"
+          "0": "Sem acessórios"
         },
         "10": {
           "M": "Pneu Michelin",
@@ -751,34 +751,6 @@
           "E": "Mercado OSA"
         }
       },
-      "compatibility_rules": [
-        {
-          "conditions": [
-            {
-              "position": 6,
-              "value": "1"
-            },
-            {
-              "position": 8,
-              "value": "U"
-            }
-          ],
-          "message": "Combinação documentada: pacote Standard '1' com tecnologia 'U'."
-        },
-        {
-          "conditions": [
-            {
-              "position": 6,
-              "value": "2"
-            },
-            {
-              "position": 8,
-              "value": "B"
-            }
-          ],
-          "message": "Combinação documentada: pacote Standard '2' com tecnologia 'B'."
-        }
-      ],
       "restrictions": [
         {
           "position": 8,
@@ -805,9 +777,10 @@
             "2"
           ],
           "model_prefix": "7719",
-          "message": "Pacote Standard está documentado apenas para o modelo MF 7719."
+          "message": "Os pacotes Standard 1 e 2 estão documentados apenas para o modelo MF 7719."
         }
-      ]
+      ],
+      "source_note": "Mapeamento extraído do Informe de Produto 10/25, edição 01, de 07/02/2025."
     },
     "model_prefix_length": 5
   },
@@ -884,10 +857,37 @@
     ],
     "model_prefix_length": 6,
     "documentation": {
-      "title": "MF 7300",
+      "title": "Série MF 7300 Dyna-3 - Lógicas dos pacotes de vendas",
       "pdf_file": "mf_7300_dyna3.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "6": {
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+        },
+        "7": {
+          "H": "Pacote Essential 3",
+          "N": "Pacote Efficient 2",
+          "8": "Pacote Transbordo"
+        },
+        "8": {
+          "C": "Rodagem: dianteiro 18.4-26 R1; traseiro 20.8-38 R1 duplo",
+          "X": "Rodagem: dianteiro 18.4-26 R2; traseiro 20.8-38 R2 duplo",
+          "1": "Rodagem: dianteiro 18.4-26 R1; traseiro 24.5-32 R1",
+          "2": "Rodagem: dianteiro 18.4-26 R1; traseiro 30.5-32 R1"
+        },
+        "9": {
+          "U": "Sem piloto automático + Massey Connect",
+          "M": "Piloto automático decimétrico Trimble + Massey Connect"
+        },
+        "10": {
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do Informe de Produto 09/25, edição 01, de 07/02/2025."
     }
   },
   "A3F": {
@@ -2017,10 +2017,49 @@
     "special_rules": [],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "4700",
+      "title": "Série MF 4700 - Lógicas dos pacotes de vendas",
       "pdf_file": "mf_4700.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "T": "Reversor mecânico",
+          "0": "Reversor eletro-hidráulico Power Shuttle"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "4": "Tração 4x4"
+        },
+        "8": {
+          "B": "Pacote Standard 2",
+          "C": "Pacote Standard 3",
+          "1": "Pacote Essential 1",
+          "2": "Pacote Essential 2",
+          "3": "Pacote Essential 3"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "S": "Rodagem: dianteiro 12.4-24 R1; traseiro 18.4-30 R1",
+          "2": "Rodagem Hard Work: dianteiro 12.4-24 R1; traseiro 18.4-30 R1, com maior quantidade de pesos",
+          "M": "Rodagem: dianteiro 14.9-24 R2; traseiro 23.1-26 R2",
+          "T": "Rodagem: dianteiro 12.4-24 R2; traseiro 18.4-30 R2"
+        },
+        "10": {
+          "A": "Sem acessórios",
+          "B": "Creeper",
+          "P": "Para-lamas dianteiro",
+          "S": "Creeper + para-lamas dianteiro + Massey Connect",
+          "1": "Creeper + para-lamas dianteiro",
+          "9": "Para-lamas dianteiro + piloto automático + Massey Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do Informe de Produto 06/25, edição 01, de 07/02/2025."
     }
   },
   "5700": {
@@ -2104,10 +2143,53 @@
     "special_rules": [],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "5700",
+      "title": "Série MF 5700 - Lógicas dos pacotes de vendas",
       "pdf_file": "mf_5700.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "T": "Reversor mecânico",
+          "0": "Reversor eletro-hidráulico Power Shuttle"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "4": "Tração 4x4"
+        },
+        "8": {
+          "1": "Pacote Essential 1",
+          "2": "Pacote Essential 2",
+          "3": "Pacote Essential 3"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "C": "Rodagem: dianteiro 14.9-24 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "M": "Rodagem: dianteiro 14.9-24 R2; traseiro 23.1-26 R2"
+        },
+        "10": {
+          "P": "Para-lamas dianteiro",
+          "1": "Creeper + para-lamas dianteiro",
+          "9": "Para-lamas dianteiro + piloto automático MF Guide by PTx Trimble + Massey Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 10,
+          "value": "9",
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Piloto automático MF Guide está documentado somente para tratores cabinados."
+        }
+      ],
+      "source_note": "Mapeamento extraído do Informe de Produto 07/25, edição 01, de 07/02/2025."
     }
   },
   "6700": {
@@ -2191,10 +2273,59 @@
     "special_rules": [],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "6700",
+      "title": "Série MF 6700 - Lógica dos pacotes de vendas",
       "pdf_file": "mf_6700.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "0": "Reversor eletro-hidráulico Power Shuttle"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "4": "Tração 4x4"
+        },
+        "8": {
+          "1": "Pacote Essential 1",
+          "3": "Pacote Essential 3"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "B": "Rodagem: dianteiro 14.9-28 R1; traseiro 18.4-38 R1",
+          "C": "Rodagem: dianteiro 14.9-26 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "E": "Rodagem: dianteiro 14.9-28 R1; traseiro 24.5-32 R1",
+          "F": "Rodagem: dianteiro 12.4-24 R1; traseiro 13.6-38 R1 duplo",
+          "G": "Rodagem: dianteiro 14.9-28 R1; traseiro 18.4-38 R1 duplo"
+        },
+        "10": {
+          "1": "Creeper + para-lamas dianteiro",
+          "4": "Para-lamas dianteiro + piloto automático MF Guide by PTx Trimble",
+          "P": "Para-lamas dianteiro",
+          "Z": "Para-lamas dianteiro + Massey Connect",
+          "9": "Para-lamas dianteiro + piloto automático MF Guide by PTx Trimble + Massey Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 10,
+          "values": [
+            "4",
+            "9"
+          ],
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Piloto automático MF Guide está documentado somente para tratores cabinados."
+        }
+      ],
+      "source_note": "Mapeamento extraído do Informe de Produto 08/25, edição 01, de 07/02/2025."
     }
   },
   "6700R": {

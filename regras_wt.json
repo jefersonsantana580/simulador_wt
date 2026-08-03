@@ -350,10 +350,47 @@
     "special_rules": [],
     "model_prefix_length": 4,
     "documentation": {
-      "title": "A2R",
+      "title": "Série A2R - Lógica de códigos comerciais",
       "pdf_file": "a2r.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "C": "Cabine",
+          "P": "Plataformado"
+        },
+        "6": {
+          "M": "Sistema de injeção mecânica",
+          "0": "Sistema de injeção eletrônica"
+        },
+        "7": {
+          "A": "Pacote Basic 1",
+          "B": "Pacote Basic 2",
+          "C": "Pacote Basic 3",
+          "E": "Pacote Basic 5",
+          "1": "Pacote Classic 1",
+          "3": "Pacote Classic 3"
+        },
+        "8": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "I": "Rodagem: dianteiro 12.4-24 R1; traseiro 13.6-38 R1",
+          "M": "Rodagem: dianteiro 14.9-24 R2; traseiro 23.1-26 R2",
+          "P": "Rodagem: dianteiro 14.9-24 R1; traseiro 23.1-26 R1",
+          "S": "Rodagem: dianteiro 12.4-24 R1; traseiro 18.4-30 R1",
+          "U": "Rodagem: dianteiro 12.4-24 R2; traseiro 18.4-30 R2",
+          "D": "Rodagem: dianteiro 9.5-24 R1; traseiro 14.9-28 R1, para A800R e A850R"
+        },
+        "9": {
+          "A": "Sem para-lamas dianteiro",
+          "P": "Com para-lamas dianteiro"
+        },
+        "10": {
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do BEV 02/25, edição 01, de 29/01/2025."
     }
   },
   "TCVT": {
@@ -440,10 +477,44 @@
     ],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "TCVT",
+      "title": "Série T CVT - Lógica de códigos comerciais",
       "pdf_file": "tcvt.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "6": {
+          "F": "Pacote Active 1",
+          "M": "Pacote Premium I",
+          "N": "Pacote Premium II",
+          "W": "Pacote Transbordo 3",
+          "Z": "Pacote Transbordo 4"
+        },
+        "7": {
+          "Q": "Rodagem: dianteiro 600/65 R28; traseiro 710/70 R38",
+          "0": "Rodagem: dianteiro 600/65 R28; traseiro 520/85 R42 duplo",
+          "3": "Rodagem: dianteiro 18.4-26 R2; traseiro 20.8-42 R2 duplo",
+          "4": "Rodagem: dianteiro 420/90 R30 R2; traseiro 520/85 R42 R2 duplo",
+          "U": "Rodagem: dianteiro 18.4-26 R1; traseiro 20.8-38 R1 duplo",
+          "N": "Rodagem: dianteiro 16.9-30 R1; traseiro 20.8-42 R1 duplo",
+          "A": "Rodagem Heavy Duty: dianteiro 16.9-30 R1; traseiro 20.8-42 R1 duplo",
+          "E": "Rodagem: dianteiro 18.4-26 R1; traseiro 24.5-32 R1",
+          "R": "Rodagem: dianteiro 18.4-26 R1; traseiro 30.5-32 R1"
+        },
+        "8": {
+          "M": "Valtra Guide decimétrico Trimble + Valtra Connect",
+          "N": "Valtra Guide centimétrico Trimble + rádio RTK Trimble + Valtra Connect",
+          "V": "Preparação para Valtra Guide + Valtra Connect"
+        },
+        "9": {
+          "1": "Transmissão CVT"
+        },
+        "10": {
+          "*": "Dados adicionais de fábrica, caractere restrito à fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do BEV 11/25, edição 01, de 29/01/2025."
     }
   },
   "MF 7700": {
@@ -1746,6 +1817,117 @@
       "position_values": {},
       "restrictions": [],
       "note": "PDF ainda não associado. Confirmar se mf_6700.pdf cobre também a família 6700R."
+    }
+  },
+  "A2S": {
+    "family": "A2S",
+    "model_prefixes": [
+      "A52P",
+      "A62P"
+    ],
+    "minimum_length": 11,
+    "model_prefix_length": 4,
+    "fields": [
+      {
+        "position": 4,
+        "label": "Modelo",
+        "extraction": "prefix",
+        "length": 4,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 5,
+        "label": "Tração",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 6,
+        "label": "Ambiente do operador",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 7,
+        "label": "Pacote de vendas",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 8,
+        "label": "Rodagem",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 9,
+        "label": "Acessórios",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 10,
+        "label": "Dados de fábrica",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      },
+      {
+        "position": 11,
+        "label": "Mercado",
+        "extraction": "character",
+        "length": 1,
+        "action_if_equal": "Regra WT não cadastrada",
+        "action_if_different": "Regra WT não cadastrada"
+      }
+    ],
+    "special_rules": [],
+    "documentation": {
+      "title": "Série A2S - Lógica de códigos comerciais",
+      "pdf_file": "a2s.pdf",
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "P": "Plataformado"
+        },
+        "7": {
+          "A": "Pacote Basic 1",
+          "B": "Pacote Basic 2",
+          "E": "Pacote Basic 5"
+        },
+        "8": {
+          "G": "Rodagem: dianteiro 9.5-24 R1; traseiro 14.9-28 R1",
+          "H": "Rodagem: dianteiro 9.5-24 R1; traseiro 14.9-28 R2",
+          "S": "Rodagem: dianteiro 12.4-24 R1; traseiro 18.4-30 R1",
+          "X": "Rodagem Heavy Duty: dianteiro 9.5-24 R1; traseiro 14.9-28 R1 HD"
+        },
+        "9": {
+          "A": "Sem acessórios",
+          "B": "Redutor"
+        },
+        "10": {
+          "0": "Informações de fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do BEV 01/25, edição 01, de 29/01/2025."
     }
   }
 }

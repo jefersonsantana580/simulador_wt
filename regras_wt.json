@@ -213,10 +213,46 @@
     ],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "BH HITECH",
+      "title": "Linha BH HiTech - Lógica de códigos comerciais",
       "pdf_file": "bh_hitech.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "6": {
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+        },
+        "7": {
+          "H": "Pacote Classic 2",
+          "M": "Pacote Active 1",
+          "N": "Pacote Active 2",
+          "4": "Pacote Transbordo 4",
+          "W": "Pacote Cana 10"
+        },
+        "8": {
+          "A": "Rodagem: dianteiro 540/65R30 R1; traseiro 650/65R38 R1, BH194 HiTech",
+          "B": "Rodagem: dianteiro 600/70R28 R1; traseiro 710/70R38 R1, BH194 e BH224 HiTech",
+          "C": "Rodagem: dianteiro 18.4-26 R1; traseiro 20.8-38 R1 duplo, BH194 e BH224 HiTech",
+          "D": "Rodagem: dianteiro 540/65R30; traseiro 20.8R38 duplo radial, BH224 HiTech",
+          "M": "Rodagem: dianteiro 16.9-30 R1; traseiro 20.8-38 R1, BH194 HiTech",
+          "X": "Rodagem: dianteiro 18.4-26 R2; traseiro 20.8-38 R2 duplo, BH154, BH184, BH194 e BH224 HiTech",
+          "1": "Rodagem: dianteiro 18.4-26 R1; traseiro 24.5-32 R1, BH154, BH184 e BH194 HiTech",
+          "2": "Rodagem: dianteiro 18.4-26 R1; traseiro 30.5-32 R1, BH184, BH194 e BH224 HiTech"
+        },
+        "9": {
+          "A": "Sem tecnologia",
+          "B": "Preparação para piloto automático",
+          "K": "Piloto automático decimétrico Trimble",
+          "M": "Piloto automático decimétrico Trimble + Valtra Connect",
+          "N": "Piloto automático centimétrico Trimble + rádio RTK Trimble + Valtra Connect",
+          "V": "Preparação para piloto automático + Valtra Connect"
+        },
+        "10": {
+          "A": "Sem acessórios"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do BEV 10/25, edição 01, de 29/01/2025."
     }
   },
   "BH G4 MEC": {
@@ -305,10 +341,37 @@
     ],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "BH G4 MEC",
+      "title": "Linha BH G4 - Lógica de códigos comerciais",
       "pdf_file": "bh_g4.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "C": "Cabinado",
+          "P": "Plataformado"
+        },
+        "7": {
+          "*": "Dados de fábrica, informação restrita de fábrica"
+        },
+        "8": {
+          "1": "Pacote Basic 1",
+          "M": "Pacote Active 1"
+        },
+        "9": {
+          "1": "Rodagem: dianteiro 18.4-26 R1; traseiro 24.5-32 R1",
+          "2": "Rodagem: dianteiro 18.4-26 R1; traseiro 30.5-32 R1"
+        },
+        "10": {
+          "A": "Sem tecnologia + eixo ZF + para-lamas dianteiros ZF",
+          "C": "Sem tecnologia + eixo Carraro + para-lamas dianteiros Carraro"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do BEV 09/25, edição 01, de 29/01/2025."
     }
   },
   "A2R": {
@@ -1610,10 +1673,39 @@
     "special_rules": [],
     "model_prefix_length": 6,
     "documentation": {
-      "title": "3300",
+      "title": "Série MF 3300Xtra - Lógicas dos pacotes de vendas",
       "pdf_file": "mf_3300_xtra.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4",
+          "2": "Tração 4x2"
+        },
+        "6": {
+          "P": "Plataformado"
+        },
+        "7": {
+          "B": "Pacote Standard 2",
+          "1": "Pacote Essential 1",
+          "2": "Pacote Essential 2"
+        },
+        "8": {
+          "A": "Rodagem: dianteiro 8.00-18 R1; traseiro 14.9-24 R1",
+          "B": "Rodagem: dianteiro 250/80-18 R1; traseiro 14.9-24 R1",
+          "H": "Rodagem: dianteiro 7.50-15 R1; traseiro 360/70 R24 R1"
+        },
+        "9": {
+          "0": "Sem super redutor e sem kit rodoviário",
+          "1": "Com super redutor (Creeper) e sem kit rodoviário"
+        },
+        "10": {
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [],
+      "source_note": "Mapeamento extraído do Informe de Produto 03/25, edição 01, de 07/02/2025."
     }
   },
   "4300": {

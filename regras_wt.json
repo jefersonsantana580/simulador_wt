@@ -74,10 +74,57 @@
     "special_rules": [],
     "model_prefix_length": 5,
     "documentation": {
-      "title": "BM G4",
+      "title": "Linha BM G4 - Lógica de códigos comerciais",
       "pdf_file": "bm_g4.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "6": {
+          "*": "Dados de fábrica, informação restrita de fábrica"
+        },
+        "7": {
+          "A": "Pacote Basic 1",
+          "B": "Pacote Basic 2",
+          "C": "Pacote Basic 3",
+          "D": "Pacote Basic 4"
+        },
+        "8": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "C": "Rodagem: dianteiro 14.9-26 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "W": "Rodagem: dianteiro 14.9-24 R1; traseiro 15.5-38 R1 dupla"
+        },
+        "9": {
+          "C": "Filtro de carvão ativado",
+          "P": "Para-lamas dianteiro",
+          "Y": "Filtro de carvão ativado + para-lamas dianteiro",
+          "1": "Filtro de carvão ativado + para-lamas dianteiro + kit de proteção de alavancas",
+          "2": "Para-lamas dianteiro + kit de proteção de alavancas"
+        },
+        "10": {
+          "*": "Dados de fábrica, informação restrita de fábrica"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 9,
+          "values": [
+            "1",
+            "2"
+          ],
+          "required": {
+            "position": 8,
+            "value": "D"
+          },
+          "message": "O kit de proteção de alavancas está documentado somente com rodagem R2 arrozeira."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 05/25, edição 01, de 29/01/2025."
     }
   },
   "BH HITECH": {
@@ -1332,10 +1379,66 @@
     ],
     "model_prefix_length": 4,
     "documentation": {
-      "title": "A4L",
+      "title": "Série A4L - Lógica de códigos comerciais",
       "pdf_file": "a4l.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "5": {
+          "4": "Tração 4x4"
+        },
+        "6": {
+          "P": "Plataformado",
+          "C": "Cabinado"
+        },
+        "7": {
+          "T": "Reversor mecânico",
+          "0": "Reversor eletro-hidráulico Power Shuttle"
+        },
+        "8": {
+          "1": "Pacote Classic 1",
+          "3": "Pacote Classic 3",
+          "E": "Pacote Classic 4"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "B": "Rodagem: dianteiro 14.9-28 R1; traseiro 18.4-38 R1",
+          "C": "Rodagem: dianteiro 14.9-26 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "E": "Rodagem: dianteiro 14.9-28 R1; traseiro 24.5-32 R1, somente A144",
+          "F": "Rodagem: dianteiro 12.4-24 R1; traseiro 13.6-38 R1 duplo",
+          "S": "Rodagem: dianteiro 14.9-28 R2; traseiro 18.4-38 R2 duplo"
+        },
+        "10": {
+          "P": "Para-lamas dianteiro",
+          "Z": "Para-lamas dianteiro + Valtra Connect",
+          "1": "Creeper + para-lamas dianteiro",
+          "4": "Para-lamas dianteiro + piloto elétrico Valtra Guide by Trimble",
+          "9": "Para-lamas dianteiro + piloto elétrico Valtra Guide by Trimble + Valtra Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 9,
+          "value": "E",
+          "model_prefix": "A14L",
+          "message": "A rodagem E está documentada somente para o modelo A144/A14L."
+        },
+        {
+          "position": 10,
+          "values": [
+            "4",
+            "9"
+          ],
+          "required": {
+            "position": 6,
+            "value": "C"
+          },
+          "message": "Piloto elétrico Valtra Guide está documentado apenas para tratores cabinados."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 07/25, edição 01, de 29/01/2025."
     }
   },
   "A4 HITECH": {
@@ -1396,10 +1499,46 @@
     "special_rules": [],
     "model_prefix_length": 7,
     "documentation": {
-      "title": "A4 HITECH",
+      "title": "Série A4 HiTech - Lógica de códigos comerciais",
       "pdf_file": "a4_hitech.pdf",
-      "position_values": {},
-      "restrictions": []
+      "position_values": {
+        "8": {
+          "1": "Pacote Classic 1",
+          "2": "Pacote Classic 2",
+          "3": "Pacote Classic 3",
+          "4": "Pacote Classic 4",
+          "7": "Pacote Active 1",
+          "8": "Pacote Active 2",
+          "9": "Pacote Active 3"
+        },
+        "9": {
+          "A": "Rodagem: dianteiro 14.9-24 R1; traseiro 18.4-34 R1",
+          "C": "Rodagem: dianteiro 14.9-26 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "E": "Rodagem: dianteiro 14.9-28 R1; traseiro 24.5-32 R1, somente A144",
+          "F": "Rodagem: dianteiro 12.4-24 R1; traseiro 13.6-38 R1 duplo",
+          "S": "Rodagem: dianteiro 14.9-28 R2; traseiro 18.4-38 R2 duplo"
+        },
+        "10": {
+          "A": "Sem tecnologia",
+          "M": "Piloto automático decimétrico Trimble + Valtra Connect",
+          "N": "Piloto automático centimétrico Trimble + rádio RTK Trimble + Valtra Connect",
+          "U": "Valtra Connect",
+          "V": "Preparação para piloto automático + Valtra Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 9,
+          "value": "E",
+          "model_prefix": "A144",
+          "message": "A rodagem E está documentada somente para o modelo A144 HiTech."
+        }
+      ],
+      "source_note": "Mapeamento extraído do BEV 08/25, edição 01, de 29/01/2024."
     }
   },
   "3300": {

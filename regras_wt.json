@@ -107,10 +107,7 @@
           "*": "Dados de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -251,10 +248,7 @@
           "A": "Sem acessórios"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -358,7 +352,7 @@
           "P": "Plataformado"
         },
         "7": {
-          "0": "Dados de fábrica, informação restrita de fábrica"
+          "*": "Dados de fábrica, informação restrita de fábrica"
         },
         "8": {
           "1": "Pacote Basic 1",
@@ -373,11 +367,7 @@
           "C": "Sem tecnologia + eixo Carraro + para-lamas dianteiros Carraro"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "A": "Mercado Argentina",
-          "E": "Mercado OSA",
-          "X": "Mercado Africa",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -503,13 +493,10 @@
           "P": "Com para-lamas dianteiro"
         },
         "10": {
-          "0": "Dados adicionais de fábrica, informação restrita de fábrica"
+          "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -633,10 +620,7 @@
           "*": "Dados adicionais de fábrica, caractere restrito à fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado KAM"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -764,9 +748,7 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "E": "Mercado OSA"
         }
       },
       "restrictions": [
@@ -901,9 +883,7 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "E": "Mercado OSA"
         }
       },
       "restrictions": [],
@@ -1061,10 +1041,7 @@
           "G": "Filtro de carvão ativo + farol de trabalho LED + suporte para controles/monitores de implementos"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1213,10 +1190,7 @@
           "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1355,10 +1329,7 @@
           "7": "Piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1384,8 +1355,7 @@
       "A11L4",
       "A12L4",
       "A13L4",
-      "A14L0",
-      "A14L4"
+      "A14L0"
     ],
     "minimum_length": 11,
     "fields": [
@@ -1508,10 +1478,7 @@
           "9": "Para-lamas dianteiro + piloto elétrico Valtra Guide by Trimble + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1623,10 +1590,7 @@
           "V": "Preparação para piloto automático + Valtra Connect"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1737,10 +1701,7 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -1851,10 +1812,7 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
@@ -1970,10 +1928,7 @@
           "*": "Dados adicionais de fábrica, informação restrita de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -2100,9 +2055,7 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "E": "Mercado OSA"
         }
       },
       "restrictions": [],
@@ -2222,9 +2175,7 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "E": "Mercado OSA"
         }
       },
       "restrictions": [
@@ -2357,9 +2308,7 @@
         },
         "11": {
           "B": "Mercado Brasil",
-          "E": "Mercado OSA",
-          "A": "Mercado Argentina",
-          "K": "Mercado Kam"
+          "E": "Mercado OSA"
         }
       },
       "restrictions": [
@@ -2437,11 +2386,44 @@
     "special_rules": [],
     "model_prefix_length": 7,
     "documentation": {
-      "title": "6700R",
-      "pdf_file": null,
-      "position_values": {},
-      "restrictions": [],
-      "note": "PDF ainda não associado. Confirmar se mf_6700.pdf cobre também a família 6700R."
+      "title": "Série MF 6700R Dyna-4 - Lógica dos pacotes de vendas",
+      "pdf_file": "mf_6700r_dyna.pdf",
+      "position_values": {
+        "8": {
+          "7": "Pacote Efficient 1",
+          "9": "Pacote Efficient 3"
+        },
+        "9": {
+          "C": "Rodagem: dianteiro 14.9-26 R1; traseiro 23.1-30 R1",
+          "D": "Rodagem: dianteiro 14.9-28 R2; traseiro 23.1-30 R2",
+          "E": "Rodagem: dianteiro 14.9-28 R1; traseiro 24.5-32 R1, somente MF 6714R",
+          "F": "Rodagem: dianteiro 12.4-24 R1; traseiro 13.6-38 R1 duplo",
+          "G": "Rodagem: dianteiro 14.9-28 R1; traseiro 18.4-38 R1 duplo"
+        },
+        "10": {
+          "M": "Piloto automático decimétrico Trimble + Massey Connect",
+          "V": "Preparação para piloto automático + Massey Connect"
+        },
+        "11": {
+          "B": "Mercado Brasil",
+          "E": "Mercado OSA"
+        }
+      },
+      "restrictions": [
+        {
+          "position": 8,
+          "value": "9",
+          "model_prefix": "6714RC4",
+          "message": "O modelo MF 6714R Dyna-4 está documentado somente no pacote Efficient 3."
+        },
+        {
+          "position": 9,
+          "value": "E",
+          "model_prefix": "6714RC4",
+          "message": "A rodagem E está documentada somente para o modelo MF 6714R."
+        }
+      ],
+      "source_note": "Mapeamento extraído do Informe de Produto 09/25, edição 01, de 07/02/2025."
     }
   },
   "A2S": {
@@ -2548,10 +2530,7 @@
           "0": "Informações de fábrica"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "A": "Mercado Argentina",
-          "E": "Mercado OSA",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [],
@@ -2669,10 +2648,7 @@
           "G": "Filtro de carvão ativo + farol de trabalho LED + suporte para controles/monitores de implementos"
         },
         "11": {
-          "B": "Mercado Brasil",
-          "A": "Mercado Argentina",
-          "E": "Mercado OSA",
-          "K": "Mercado Kam"
+          "B": "Mercado Brasil"
         }
       },
       "restrictions": [
